@@ -1,0 +1,4 @@
+const handleSearch = (event) => {
+  console.log(`Searching for: ${event.target.value}`);
+};
+document.getElementById("search").addEventListener("input", handleSearch);
