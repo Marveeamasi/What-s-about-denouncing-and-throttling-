@@ -1,0 +1,16 @@
+const throttle = (func, interval) => {
+  let lastTime = 0;
+  return (...args) => {
+    const now = Date.now();
+    if (now - lastTime >= interval) {
+      lastTime = now;
+      func(...args);
+    }
+  };
+};
+
+const handleScroll = throttle(() => {
+  console.log("Scrolled to:", window.scrollY);
+}, 200);
+
+window.addEventListener("scroll", handleScroll);
