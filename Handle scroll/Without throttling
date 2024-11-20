@@ -1,0 +1,4 @@
+const handleScroll = () => {
+  console.log("Scrolled to:", window.scrollY);
+};
+window.addEventListener("scroll", handleScroll);
